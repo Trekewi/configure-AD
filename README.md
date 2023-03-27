@@ -68,5 +68,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - You can now log into Client-1 as a normal, non-administrative user now
   - Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab)
   
-  
+- 7.   
+  - Login to DC-1 as jane_admin
+(When executing the PowerShell script: 1) Make sure you are doing it on Windows Server VM, not the Client VM. It won't work if you do. 2) Make sure your "_EMPLOYEES" OU within Active Directory matches the OU in your script. If it doesn't match, you will get errors.)
+  - Open PowerShell_ise as an administrator
+  - Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+  - Run the script and observe the accounts being created
+  - When finished, open ADUC and observe the accounts in the appropriate OU
+  - attempt to log into Client-1 with one of the accounts (take note of the password in the script)
+
+  - Finish.
 
