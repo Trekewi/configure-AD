@@ -61,3 +61,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
   - Create a new OU named “_CLIENTS” and drag Client-1 into there
   
+- 6. Setup Remote Desktop for non-administrative users on Client-1
+  - Log into Client-1 as mydomain.com\jane_admin and open system properties
+  - Click “Remote Desktop”
+  - Allow “domain users” access to remote desktop
+  - You can now log into Client-1 as a normal, non-administrative user now
+  - Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab)
+  
+  
+
