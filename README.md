@@ -36,5 +36,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1.a
   - Ensure that both VMs are in the same Vnet (you can check the topology with Network Watcher
   
+- 2. Ensure Connectivity between the client and Domain Controller
+  - Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+  - Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
+  - Check back at Client-1 to see the ping succeed
 
-
+- 3. Install Active Directory
+  - Login to DC-1 and install Active Directory Domain Services, Server Manager > add roles and features ->
+  - Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+  - Restart and then log back into DC-1 as user: mydomain.com\labuser
+  
+  
