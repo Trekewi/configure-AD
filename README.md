@@ -54,5 +54,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
   - User jane_admin as your admin account from now on
 
-  
+- 5. Join Client-1 to your domain (mydomain.com)
+  - From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
+  - From the Azure Portal, restart Client-1
+  - Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
+  - Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
+  - Create a new OU named “_CLIENTS” and drag Client-1 into there
   
